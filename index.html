@@ -4,27 +4,27 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-	<link rel="icon" type="image/png" href="/favicon.png">
-	<title>CataBits</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/png" href="favicon.png">
+	<title>By Luferat</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-	<link rel="stylesheet" href="https://catabits.github.io/css/css.css">
+	<link rel="stylesheet" href="css/css.css">
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div id="wrap">
 <header>
-	<a href="/"><img src="https://catabits.github.io/img/logo.catabits.png" alt="Logotipo"><h1>CataBits<small>A máquina movida à bits</small></h1></a>
+	<a href="/" title="By Luferat - Tecnologia, informação e formação."><img src="img/logo2.png" alt="Logotipo"><h1>By Luferat<small>Tecnologia, informação e formação.</small></h1></a>
     <div id="header-wrap">
       <form method="get">
       <input type="search" placeholder="Procurar..."><button><i class="fas fa-search"></i></button>
       </form>
       <nav>
-          <a href=""><i class="fas fa-fw fa-pen-nib"></i> Artigos</a>
-          <a href="" class="m-contatos"><i class="fas fa-fw fa-comments"></i> Contatos</a>
+          <a href="" title="Artigos autorais"><i class="fas fa-fw fa-pen-nib"></i> Artigos</a>
+          <a href="" title="Faça contato conosco" class="m-contatos"><i class="fas fa-fw fa-comments"></i> Contatos</a>
           <div class="dropdown" id="d-sobre">
-          	<a href="#"><i class="fas fa-fw fa-info-circle"></i> Sobre <i class="fas fa-caret-down"></i></a>
+          	<a href="JavaScript:void(0)"><i class="fas fa-fw fa-info-circle"></i> Sobre <i class="fas fa-caret-down"></i></a>
             <div class="droplinks">
             	<a href=""><i class="fas fa-fw fa-file-code"></i> O site</a>
                 <a href=""><i class="fas fa-fw fa-user-tie"></i> O autor</a>
@@ -34,7 +34,7 @@
             </div>
           </div>
           <div class="dropdown" id="d-usuario">
-          	<a href="#"><i class="fas fa-fw fa-user"></i> <i class="fas fa-caret-down"></i></a>
+          	<a href="JavaScript:void(0)"><i class="fas fa-fw fa-user"></i> <i class="fas fa-caret-down"></i></a>
             <div class="droplinks">
             	<a href=""><i class="far fa-fw fa-user"></i> Olá anônimo</a>
                 <span class="l-links">
@@ -80,15 +80,19 @@
       <div class="card">
       	<div class="c-header"><h4>Sidebar Card</h4></div>
         <div class="c-image"><img src="https://loremflickr.com/320/240/technology" alt=""></div>
-        <div class="c-body">
-        	<p>Sed maximus lobortis lobortis. Donec eu rhoncus ex, nec vehicula magna. Aenean dignissim massa vitae cursus dignissim. Praesent vel mauris purus. Donec et lorem vulputate, semper risus eget, volutpat ipsum.</p>
-        </div>
-        <div class="c-footer">
-        	<a href="">Link do footer</a>
-        </div>
+        <div class="c-body"><p>Sed maximus lobortis lobortis. Donec eu rhoncus ex, nec vehicula magna. Aenean dignissim massa vitae cursus dignissim. Praesent vel mauris purus. Donec et lorem vulputate, semper risus eget, volutpat ipsum.</p></div>
+        <div class="c-footer"><a href="">Link do footer</a></div>
       </div>
       
-      </aside>
+      <!-- CARD -->
+      <div class="card">
+        <div class="c-header"><h4>Sidebar Card 2</h4></div>
+        <div class="c-image"><img src="https://loremflickr.com/320/240/technology" alt=""></div>
+        <div class="c-body"><p>Sed maximus lobortis lobortis. Donec eu rhoncus ex, nec vehicula magna. Aenean dignissim massa vitae cursus dignissim. Praesent vel mauris purus. Donec et lorem vulputate, semper risus eget, volutpat ipsum.</p></div>
+        <div class="c-footer"><a href="">Link do footer 2</a></div>
+      </div>
+
+</aside>
     </div>
 </main>
 <footer>
@@ -104,33 +108,6 @@
 
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-	function dReset(){
-      $('.droplinks').hide('fast');
-      $('.dropdown > a').removeClass('active');
-      $('.dropdown > a i:last-child').removeClass('fa-caret-up');
-      $('.dropdown > a i:last-child').addClass('fa-caret-down');
-    }
-    function dToggle(dId){
-      	if($(dId+' > div').is(':visible')){
-			dReset();
-        } else {
-        	dReset();
-            $(dId+' > div').show('fast');
-            $(dId+' > a').addClass('active');
-            $(dId+' > a i:last-child').addClass('fa-caret-up');
-        }
-        return false;
-    }
-
-	$('#d-sobre > a').click(function(){
-    	dToggle('#d-sobre');
-    });
-	$('#d-usuario > a').click(function(){
-    	dToggle('#d-usuario');
-    });	
-});
-</script>
+<script src="js/js.js"></script>
 </body>
 </html>
